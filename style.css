@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* universal styles */
+
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.btn-wide {
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+
+input:not([type="submit"]), select {
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 1rem;
+  border: 1px solid grey;
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+
+input:not([type="submit"]):focus, select:focus {
+  outline: none;
+  border: 1px solid dodgerblue;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+.pink {
+  color: #df0043;
+}
+
+.pink:hover {
+  color: #92002c;
+}
+
+.btn-pink {
+  background-color: #df0043;
+  color: white;
+}
+
+.btn-pink:hover {
+  background-color: #92002c;
+}
+
+.btn-navy {
+  background-color: #041853;
+  color: white;
+}
+
+.btn-navy:hover {
+  background-color: #000a29;
+}
+
+/* header */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(219, 219, 219);
+  padding: 5px 50px;
+  line-height: 1.1;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header li:last-of-type {
+  margin-right: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div {
+  color: white;
+}
+
+.loader {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.hidden {
+  animation: fadeout 1s;
+  animation-fill-mode: forwards;
+}
+
+#spinner {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 3px solid lightgray;
+  border-top-color: coral;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
